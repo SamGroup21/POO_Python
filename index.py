@@ -16,11 +16,11 @@
 #         if vitesse >= 100 :
 #             for i, value in marque.items() :
 #                print("Votre voiture est de marque",f"{i} de vitesse : {value}")
-               
+            
 #         else :
 #             print("aucune voiture ne correspond a votre description")
             
-       
+    
 # car1 = Voiture()
 # car2 = Voiture()
 # car1.Toyota()
@@ -28,7 +28,7 @@
 
 
 #class Cours : #classe qui ne fait rien et qui cause aucun probleme
-    pass
+    # pass
 
 #creer les variable de la classe en dehors de la classe (dans ce cas on declare les variable en dehors de la fonction)
 # c = Cours()
@@ -41,7 +41,7 @@
 #print(type(c))
 
 
-class Cours : 
+class Cours :  
     def __init__(self,titre,etudiant,duree) :
         self.titre = titre
         self.etudiant = etudiant
@@ -49,13 +49,27 @@ class Cours :
         
     
     def afficher_info(self) :
-        print(f"Etudiants : {self.etudiant}")
-        print((f"Duree du cours : {self.dure}"))
+        # print(f"Etudiants : {self.etudiant}")
+        # print((f"Duree du cours : {self.dure}"))
+        # ou encore
+        print(f"Titre du cours : {self.titre}")
+        print((f"Duree du cours : {self.dure}min"))
+        print("Etudiants : ",self.etudiant)
+        
+    def ajouter_etudiant (self) :
+        self.etudiant = self.etudiant + 1
         
         
-c = Cours("Python","samuel","tous",120)
-c.afficher_info()
+# c1 = Cours("Python","samuel",120)
+# c2 = Cours("Java","Decor",20)
+#  ou encore 
+# c1 = Cours("Python","samuel",120)
+c2 = Cours(titre="Java",etudiant = 0,duree =20)
+
+# c1.afficher_info()
+c2.afficher_info()
+c2.ajouter_etudiant()
+c2.afficher_info()
 
 
-    
-    
+
