@@ -79,20 +79,23 @@
 class Cours :  
     def __init__(self,titre,etudiant,duree) :
         self.titre = titre
-        self.etudiant = etudiant
+        self.__etudiant = etudiant
         self.dure = duree
-        self._protege = 10
+        self._protege = 15
         self.__prive = 10 #accessible seulement avec ou dans les methode de la classe
-    def afficher_info() :
+    def afficher_info(self) :
         
         print(f"Titre du cours : {self.titre}")
-        print("Etudiants : ",self.etudiant)
-        print((f"Duree du cours : {self.dure}min"))
+        print("Etudiants : ",self.__etudiant)
+        print((f"Duree du cours : {self.dure} min"))
         
         
-c2 = Cours()
+c2 = Cours(titre = "django",etudiant = 0,duree =20)
 c2.afficher_info()
-  
-        
-dir(c2)
+# "_protege" in print(dir(c2))
+# "__prive" in print(dir(c2))
+
+# print(c2._protege)
+#print(c2.__prive) # ça ne va pas s'execter car la variable est privé
+# print(c2._Cours__prive) # accessible seulement avec ou dans les methode de la classe
 
